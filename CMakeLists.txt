@@ -15,7 +15,9 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(hello_test tests/hello_test.cpp src/hello.cpp)
-add_executable(main main.cpp src/hello.cpp)
+add_executable(DynamicArray_test src/DynamicArray.cpp)
+add_executable(CSVParser_test src/CSVParser.cpp src/DynamicArray.cpp)
+add_executable(main main.cpp src/DynamicArray.cpp src/CSVParser.cpp)
 
-target_link_libraries(hello_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(DynamicArray_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(CSVParser_test PRIVATE Catch2::Catch2WithMain)
