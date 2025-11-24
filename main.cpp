@@ -16,6 +16,8 @@ int main() {
     }
 
     CSVParser parser(file);
-    std::cout << "Median is " << parser.findMedian() << "\n";
+    std::cout << "The median of the dataset is " << parser.findMedian() << "\n";
+    std::cout << "The mean of the dataset is:   " << parser.findMean() << "\n";
+    std::cout << "The mode of the dataset is:   " << parser.findMode() << "\n";
     return 0;
 }

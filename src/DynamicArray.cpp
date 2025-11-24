@@ -28,5 +28,11 @@ int DynamicArray::size() const {
 }
 
 int DynamicArray::get(int index) const {
+    if (index > length)
+        return 0;
     return data[index];
+}
+
+void DynamicArray::set(int index, int value) {
+    data[index] = value;
 }

@@ -12,6 +12,7 @@ public:
     void push_back(int value);
     int size() const;
     int get(int index) const;
+    void set(int index, int value);
     ~DynamicArray();
 };
 

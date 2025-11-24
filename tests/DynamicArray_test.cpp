@@ -28,6 +28,16 @@ TEST_CASE("Getting elements returns correct values") {
     REQUIRE(arr.get(1) == 15);
 }
 
+TEST_CASE("Setting elements sets correct values") {
+    DynamicArray arr;
+    arr.push_back(5);
+    arr.push_back(15);
+
+    REQUIRE(arr.get(0) == 5);
+    arr.set(0, 15);
+    REQUIRE(arr.get(0) == 15);
+}
+
 TEST_CASE("Dynamic resizing works when adding many elements") {
     DynamicArray arr;
     for (int i = 0; i < 10; ++i) {
